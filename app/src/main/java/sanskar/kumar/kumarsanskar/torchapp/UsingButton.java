@@ -2,6 +2,7 @@ package sanskar.kumar.kumarsanskar.torchapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.hardware.camera2.CameraAccessException;
 import android.hardware.camera2.CameraManager;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,12 @@ public class UsingButton extends AppCompatActivity {
         torchOn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                try {
+                    String s1 = cameraManager.getCameraIdList()[0];
+                    cameraManager.setTorchMode(s1,true);
+                }catch(CameraAccessException e){
+
+                }
             }
         });
     }
