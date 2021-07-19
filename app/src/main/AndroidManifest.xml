@@ -9,6 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TorchApp">
+        <activity android:name=".UsingToggle"></activity>
+        <activity android:name=".UsingButton" />
+        <activity android:name=".UsingImage" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
