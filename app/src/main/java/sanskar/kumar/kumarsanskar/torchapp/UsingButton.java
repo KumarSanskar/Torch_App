@@ -9,6 +9,7 @@ import android.widget.Button;
 public class UsingButton extends AppCompatActivity {
     Button torchOn,torchOff;
     CameraManager cameraManager;
+    private boolean camera = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
