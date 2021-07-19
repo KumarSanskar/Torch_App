@@ -31,5 +31,17 @@ public class UsingButton extends AppCompatActivity {
                 }
             }
         });
+        torchOff.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    String s2 = cameraManager.getCameraIdList()[0];
+                    cameraManager.setTorchMode(s2,false);
+                }catch(CameraAccessException e){
+
+                }
+            }
+        });
+
     }
 }
