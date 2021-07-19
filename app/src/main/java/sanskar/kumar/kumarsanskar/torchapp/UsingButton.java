@@ -24,8 +24,8 @@ public class UsingButton extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
-                    String s1 = cameraManager.getCameraIdList()[0];
-                    cameraManager.setTorchMode(s1,true);
+                    String s1 = cameraManager.getCameraIdList()[0];//this is the id for using flashlight
+                    cameraManager.setTorchMode(s1,true);//this turns the flashlight on
                 }catch(CameraAccessException e){
 
                 }
@@ -36,7 +36,7 @@ public class UsingButton extends AppCompatActivity {
             public void onClick(View v) {
                 try {
                     String s2 = cameraManager.getCameraIdList()[0];
-                    cameraManager.setTorchMode(s2,false);
+                    cameraManager.setTorchMode(s2,false);// this turns the flashlight off
                 }catch(CameraAccessException e){
 
                 }
