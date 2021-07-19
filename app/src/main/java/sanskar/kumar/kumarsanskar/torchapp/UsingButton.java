@@ -14,5 +14,8 @@ public class UsingButton extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_using_button);
+        torchOn = (Button)findViewById(R.id.button4);
+        torchOff = (Button)findViewById(R.id.button5);
+        cameraManager = (CameraManager)getSystemService(CAMERA_SERVICE);
     }
 }
