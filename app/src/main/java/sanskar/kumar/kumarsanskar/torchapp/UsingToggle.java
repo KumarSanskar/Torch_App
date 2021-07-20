@@ -35,7 +35,7 @@ public class UsingToggle extends AppCompatActivity {
 
                     }
 
-                }else{
+                } else {
                     try {
                         String s2 = cameraManager.getCameraIdList()[0];
                         cameraManager.setTorchMode(s2, false);
