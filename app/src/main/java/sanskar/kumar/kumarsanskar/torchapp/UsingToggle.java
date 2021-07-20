@@ -19,9 +19,13 @@ public class UsingToggle extends AppCompatActivity {
         setContentView(R.layout.activity_using_toggle);
         turnOn = findViewById(R.id.toggleButton);
         cameraManager = (CameraManager) getSystemService(CAMERA_SERVICE);
+        /*
+        using setOnCheckedChangeListener() we bring into the use of Toggle button
+         */
         turnOn.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                //if the value is 'isChecked' then certain statements are executed to enable flashlight
                 if (isChecked) {
                     try {
                         String s1 = cameraManager.getCameraIdList()[0];
