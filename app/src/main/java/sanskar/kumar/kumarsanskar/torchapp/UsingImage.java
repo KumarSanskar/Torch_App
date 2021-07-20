@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 public class UsingImage extends AppCompatActivity {
     ImageButton powerOn;
     CameraManager cameraManager;
+    private boolean camera = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
