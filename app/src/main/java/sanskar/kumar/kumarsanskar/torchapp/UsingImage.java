@@ -22,6 +22,9 @@ public class UsingImage extends AppCompatActivity {
         powerOn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                /*checks for if value of camera is false then executes a set of statements to
+                perform an operation other wise another set to handle another operation
+                 */
                 if (camera == false) {
                     try {
                         String s1 = cameraManager.getCameraIdList()[0];
