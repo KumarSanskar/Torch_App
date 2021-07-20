@@ -22,7 +22,25 @@ public class UsingImage extends AppCompatActivity {
         powerOn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (camera == false) {
+                    try {
+                        String s1 = cameraManager.getCameraIdList()[0];
+                        cameraManager.setTorchMode(s1, true);
+                        camera = true;
+                        powerOn.setImageResource(R.drawable.poweron);
+                    } catch (CameraAccessException e) {
 
+                    }
+                } else {
+                    try {
+                        String s2 = cameraManager.getCameraIdList()[0];
+                        cameraManager.setTorchMode(s2, false);
+                        camera = false;
+                        powerOn.setImageResource(R.drawable.poweroff);
+                    } catch (CameraAccessException e) {
+
+                    }
+                }
             }
         });
     }
