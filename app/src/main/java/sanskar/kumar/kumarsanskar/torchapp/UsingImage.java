@@ -15,5 +15,7 @@ public class UsingImage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_using_image);
+        powerOn = (ImageButton)findViewById(R.id.imageButton);
+        cameraManager = (CameraManager)getSystemService(CAMERA_SERVICE);
     }
 }
